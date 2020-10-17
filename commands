@@ -1,0 +1,11 @@
+vncserver :2
+screen -dmS vncviewer PasswordFile=/home/oleg/.vnc/passwd localhost :2
+
+
+#./main -targHost 192.168.50.111  -targPass 28092001 -targPort 5902 -recFile a.fbs
+#Видеотрансляция завершена
+#DISPLAY=:2 simplescreenrecorder --start-hidden --start-recording
+
+DISPLAY=:2 firefox-developer-edition https://www.instagram.com/__oleg__42_/live/
+ffmpeg -i YOUR_FILE.webm -c:v copy -c:a copy output.webm
+ffmpeg -i chek.png -filter:v "crop=160:30:1145:260" -c:a copy out.png -y
